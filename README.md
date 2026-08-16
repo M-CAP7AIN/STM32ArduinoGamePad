@@ -1,9 +1,9 @@
 # 🎮 Guide to Install and Setup BluePill F103C8 as HID Gamepad
 
-![Board Configuration](Images/GamePad.png)
+![GamePad](Images/GamePad.png)
 
 ## 📌 Introduction
-This document provides a complete guide to install and configure the **BluePill STM32F103C8** board as a **HID Game Controller** on Windows. By following this tutorial, your board will be recognized as a HID controller capable of sending Axes, Buttons, and POV Hat data.
+This document provides a complete guide to install and configure the **BluePill STM32F103C8** board as a **HID Game Controller** on Windows and Android. By following this tutorial, your board will be recognized as a HID controller capable of sending Axes, Buttons, and POV Hat data.
 
 ---
 
@@ -24,7 +24,7 @@ This document provides a complete guide to install and configure the **BluePill 
 2. Go to **File > Preferences**.
 3. In the **Additional Boards Manager URLs** section, add the following URL:
 
-https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+`https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json`
 
 
 4. Go to **Tools > Board > Boards Manager...**.
@@ -91,7 +91,7 @@ After installation, configure your board with the following settings:
 
 Path to installed libraries (after STM32 package installation):
 
-C:\Users\XXXXXXX\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\3.0.0\libraries\
+`C:\Users\XXXXXXX\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\3.0.0\libraries\`
 
 
 ---
@@ -107,7 +107,7 @@ I have written a custom **USBDevice** library that adds **Gamepad/Joystick** sup
 1. **Download** the `USBDevice.rar` file from the Library Folder.
 2. **Extract** the contents to the following path:
 
-C:\Users\XXXXXXX\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\3.0.0\libraries\
+`C:\Users\XXXXXXX\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\3.0.0\libraries\`
 
 3. **Replace** the existing `USBDevice` folder if prompted.
 4. **Restart** Arduino IDE.
@@ -117,5 +117,16 @@ After extraction, your `USBDevice` library will include Gamepad HID support, all
 - Up to 32 buttons
 - POV Hat switch
 - Triggers and more
+
+---
+
+
+### 🚧 Planned Features
+
+In future updates, the following capabilities will be added:
+
+- ✅ Custom device name configuration
+- ✅ Dynamic manufacturer string
+- ✅ User-defined Product ID (PID) and Vendor ID (VID)
 
 ---
